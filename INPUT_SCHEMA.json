@@ -20,12 +20,8 @@
             "title": "Facebook Groups",
             "type": "array",
             "description": "List of Facebook group URLs to post to",
-            "editor": "stringList",
-            "items": {
-                "type": "string",
-                "title": "Group URL",
-                "description": "Full URL of the Facebook group"
-            }
+            "prefill": ["https://www.facebook.com/groups/example"],
+            "editor": "json"
         },
         "message": {
             "title": "Message",
