@@ -12,6 +12,10 @@ RUN apt-get update && apt-get install -y \
     chromium-chromedriver \
     && rm -rf /var/lib/apt/lists/*
 
+# Create directory for cookies
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
 # Install Python dependencies
 COPY requirements.txt ./
 RUN pip3 install -r requirements.txt
