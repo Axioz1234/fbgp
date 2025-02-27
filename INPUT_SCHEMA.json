@@ -1,0 +1,38 @@
+{
+    "title": "Facebook Group Poster Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "facebookEmail": {
+            "title": "Facebook Email",
+            "type": "string",
+            "description": "Your Facebook login email",
+            "editor": "textfield"
+        },
+        "facebookPassword": {
+            "title": "Facebook Password",
+            "type": "string",
+            "description": "Your Facebook login password",
+            "editor": "textfield",
+            "isSecret": true
+        },
+        "groups": {
+            "title": "Facebook Groups",
+            "type": "array",
+            "description": "List of Facebook group URLs to post to",
+            "editor": "stringList",
+            "items": {
+                "type": "string",
+                "title": "Group URL",
+                "description": "Full URL of the Facebook group"
+            }
+        },
+        "message": {
+            "title": "Message",
+            "type": "string",
+            "description": "The message to post in the groups",
+            "editor": "textarea"
+        }
+    },
+    "required": ["facebookEmail", "facebookPassword", "groups", "message"]
+}
